@@ -1,0 +1,12 @@
+public class Punto3
+{
+     public static void arreglo3 (char[] arreglo) {
+       for (int i = 0; i<arreglo.length;i++) {
+           for (int j = 0; j<arreglo.length;j++){
+            for (int l = 0; l<arreglo.length;l++){
+                System.out.println(" "+ arreglo[i]+arreglo[j]+arreglo[l]);
+            }
+    }
+}
+}
+}
