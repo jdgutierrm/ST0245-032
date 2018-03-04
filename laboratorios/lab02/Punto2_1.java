@@ -1,58 +1,50 @@
 public class Punto2_1 {
-    public int countEvens(int[] nums) {
-        int cont = 0;
-        for (int i = 0; i < nums.length; i++)
-            if (nums[i] % 2 == 0) cont++;
-        return cont;
-    }
-    public int bigDiff(int[] nums) {
-        int max = nums[0];
-        int min = nums[0];
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] > max){
-                max = nums[i];
-            }  
-            if (nums[i] <= min){
-                min = nums[i];
-            }
-        }
-        return max - min;
-    }
-    public int centeredAverage(int[] nums) {
-        int max = nums[0];
-        int min = nums[0];
-        int sum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            sum += nums[i];
-            if (nums[i] > max){
-                max = nums[i];
-            }
-            if (nums[i] < min){
-                min = nums[i];
-            }
-        }
-        return (sum - (max + min)) / (nums.length - 2);
-    }
-    public int sum13(int[] nums) {
-        int total = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] != 13){
-                total += nums[i];
-            } else if (i <= nums.length - 1){
-                i++;
-            }
-        }
-        return total;
-    }
-    public int sum67(int[] nums) {
-        int sum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] != 6){
-                sum += nums[i];
-            } else {
-                while (nums[i] != 7) i++;
-              }
-        }
-        return sum;
-    }
+  	public boolean only14(int[] nums) {
+      int cont=0;                                                        
+      for(int i=0;i<nums.length;i++){                       
+      if(nums[i]==1|| nums[i]==4) cont++;            
+  }
+     if(cont==nums.length) return true;              
+  return false;                                                   
 }
+
+   public boolean isEverywhere(int[] nums, int val) {        
+       for(int i=0;i<nums.length-1;i++){                                 
+       if(nums[i]!=val&&nums[i+1]!=val) return false;        
+  }
+  return true;                                                                     
+}
+
+   public int matchUp(int[] nums1, int[] nums2) {
+  int cont=0;                                                                    
+    for(int i=0;i<nums1.length;i++){                               
+      int a=nums1[i]-nums2[i];                                         
+        if(Math.abs(a)<=2&&Math.abs(a)>0) cont++;    
+    }
+    return cont;                                                                    
+}
+
+    public boolean has12(int[] nums) {
+       boolean comprobar=false;                                          
+       for(int i=0;i<nums.length;i++){                               
+       if(nums[i]==1)                                                       
+        comprobar=true;                                                 
+      if(comprobar&&nums[i]==2)                              
+        return true;                                                         
+    }
+    return false;                                                           
+}
+
+    public boolean haveThree(int[] nums) {
+      int cont=0;                                                             
+      if(nums.length<5)                                               
+      return false;                                                       
+      for(int i=0;i<nums.length-1;i++){                     
+      if(nums[i]==3&&nums[i+1]!=3)                    
+        cont++;                                                         
+    }  
+      if(nums[nums.length-1]==3&&nums[nums.length-2]!=3)   
+      cont++;                                                          
+      return cont==3;                                              
+}
+
