@@ -1,0 +1,17 @@
+digraph finite_state_machine { 
+ rankdir=TB; 
+  node [shape = circle]; Peverell -> Seńor; 
+Seńor -> Thomas; 
+Thomas -> SraGaunt; 
+Thomas -> Tom; 
+Seńor -> Antioch; 
+Antioch -> Merope; 
+Antioch -> SorvoloGaunt; 
+Peverell -> Seńora; 
+Seńora -> Ignotus; 
+Ignotus -> JamesPotter; 
+Ignotus -> Lily; 
+Seńora -> Cadmus; 
+Cadmus -> Dorea; 
+Cadmus -> Charlus; 
+}
